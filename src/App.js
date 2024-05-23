@@ -1,3 +1,4 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -15,6 +16,8 @@ import ReactAF from "./ArrowFunction/ReactAF";
 
 import Container from "react-bootstrap/Container";
 import JSXTest from './JSXTest/JSXTest';
+import FragmentTest from './FragmentTest/FragmentTest';
+import WelcomeCompCall from "./CompCall/Welcome";
 
 
 
@@ -22,7 +25,7 @@ import JSXTest from './JSXTest/JSXTest';
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       {/* <MyComponent /> */}
       {/* <CodeMind /> */}
       {/* <HeaderCC />
@@ -37,10 +40,12 @@ function App() {
       {/* <MyClassComp />
       <Welcome />
       <ClassCompBody/> */}
-      <JSXTest/>
+      {/* <JSXTest/> */}
+      {/* <FragmentTest/> */}
+      <WelcomeCompCall/>
 
       
-    </div>
+    </React.Fragment>
   );
 }
 
