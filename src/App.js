@@ -23,6 +23,10 @@ import "./App.css";
 import LoginPage from './AssignConditiponalRendering/LoginPage';
 import StateInClassComp from './StateInClassComp/StateInCLassComp';
 import StateClassComp from "./AssignStateInClassComp/StateClassComp";
+import StateInFuncComp from "./StateInClassComp/stateInFuncComp";
+import Main from "./RoutingTest/Main";
+import Home from "./RoutingTest/Home";
+import ArrayState from './AssignStateInFunctionComponent/ArrayState';
 
 
 
@@ -51,8 +55,11 @@ function App() {
       {/* <ParentComp/> */}
       {/* <ConditionalRendering/> */}
       {/* <StateInClassComp/> */}
-      <StateClassComp/>
-      
+      {/* <StateClassComp/> */}
+      {/* <StateInFuncComp/> */}
+      <ArrayState/>
+      {/* <Main/> */}
+      {/* <Home/>       */}
             
     </React.Fragment>
   );
