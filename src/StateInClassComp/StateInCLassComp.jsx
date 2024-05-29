@@ -11,8 +11,16 @@ class StateInClassComp extends Component{
         this.state = {
             userName: "Guest"
         }
+
+        this.state = {
+            flag:true,
+            arrayValue:[1,2,,5,9,10,15,20,25],
+            person:{
+                name:"Sanehu",
+                age: 25
+            }
+        }
     }
-    
     changeUser(){
         console.log("Inside change user function")
         this.user = "Admin";
@@ -26,7 +34,7 @@ class StateInClassComp extends Component{
         console.log(this.state.userName);
 
     }
-
+    
     render(){
         return(<>
             <h1>State In Class Component</h1>
@@ -36,6 +44,10 @@ class StateInClassComp extends Component{
 
             {/* <button onClick={this.changeUser.bind(this)}> Login as Admin </button> */}
             <button onClick={this.changeUserName.bind(this)}> Login as Admin </button>
+
+            <p>Boolean is : {this.state.flag?"True":"False"}</p>
+            <p>Array values: {this.state.arrayValue.join(',')}</p>
+            <p>Person Object : {JSON.stringify(this.state.person)}</p>
             </>
 
         )
