@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#heading{
+   text-align: center;
+
+}
+div #tableContainer{
+    width: 800px;
+    margin: auto;
+}
+
+table{
+    border: 2px solid rgb(142, 142, 255);
+}
+div .card{
+    align-items:baseline;
+  table-layout: fixed;
+  width: 200px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
