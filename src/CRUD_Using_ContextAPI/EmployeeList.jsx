@@ -8,7 +8,11 @@ import Table from 'react-bootstrap/Table';
 const EmployeeList = () => {
     
     const navigate = useNavigate()
-   const {employee}= useContext(EmployeeContext)
+   const {employee,  deleteEmployee}= useContext(EmployeeContext);
+    
+const handleDelete = (id)=>{
+    deleteEmployee(id);
+   }
     
   return (
     <>
@@ -42,8 +46,8 @@ const EmployeeList = () => {
                           <td>{emp.position}</td>
                           <td>{emp.company}</td>
 
-                          <Button variant="warning" onClick={()=>navigate(`/editEmployee/${emp.id}`)} >EDIT</Button>
-                          <Button variant="danger">DELETE</Button>
+                          <Button variant="warning" size='sm' onClick={()=>navigate(`/editEmployee/${emp.id}`)} >EDIT</Button>
+                          <Button variant="danger" size='sm' onClick={()=>handleDelete(emp.id)}>DELETE</Button>
                       </tr>
                   ))}
               </tbody>
