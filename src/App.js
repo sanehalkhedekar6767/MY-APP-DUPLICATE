@@ -65,7 +65,7 @@ import AddEmployee from "./CRUD_Using_ContextAPI/AddEmployee";
 import EmployeeList from "./CRUD_Using_ContextAPI/EmployeeList";
 import EditEmployee from "./CRUD_Using_ContextAPI/EditEmployee";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
-import { EmployeeProvider } from "./CRUD_Using_ContextAPI/EmployeeProvider";
+// import { EmployeeProvider } from "./CRUD_Using_ContextAPI/EmployeeStore";
 
 
 
@@ -137,13 +137,13 @@ function App() {
 
 
           <Router>
-            <EmployeeProvider>
+            {/* <EmployeeProvider> */}
               <Routes>
                 <Route exact path = '/' element={<EmployeeList/>}></Route>
                 <Route exact path="/addEmployee" element={<AddEmployee/>}></Route>
-                <Route exact path="editEmployee" element={<EditEmployee/>}></Route>
+                <Route exact path="/editEmployee/:id" element={<EditEmployee/>}></Route>
               </Routes>
-            </EmployeeProvider>
+            {/* </EmployeeProvider> */}
           </Router>
 
 
